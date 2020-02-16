@@ -1,0 +1,90 @@
+
+/* CSS Grid Styles */
+
+.grid-container {
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr auto 2fr;
+    /*or  grid-template:  1fr auto 2fr  / 1fr 1fr 1fr 1fr; */ 
+    row-gap: 5px;
+    column-gap: 10px;
+    /* or  gap: 5px 10px; */
+  }
+  
+  .grid-container2 {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #80cbc4;
+    border: 3px solid black;
+  }
+  
+  .grid-item {
+    border: 1px solid #fff;
+  }
+  
+  .grid-item3 {
+    border: 1px solid #fff;
+  }
+  
+  /* Grid item (third) */
+  .grid-container2 .grid-item:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3; 
+  
+  }
+  
+  .grid-container3 {
+    display: grid;
+    gap: 10px;
+    grid-template: repeat(6, 1fr) / repeat(12, 1fr); /* rows then columns */
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    background-color: lightblue;
+    border: 3px solid black;
+  }
+  
+  .grid-item-header {
+    grid-column: 1 / -1;  grid-row: 1 / 2;
+    border: 1px solid #fff;
+    background-color: lightblue;
+  }   
+  
+  .grid-item-content {
+    grid-column: 2 / -1;  grid-row: 2 / -2;
+    border: 1px solid #fff;
+    background-color: lightblue;
+  }
+  
+  .grid-item-footer {
+    grid-column: 2 / -1;  grid-row: -2 / -1;
+    border: 1px solid #fff;
+    background-color: lightblue;
+  }
+  
+  .grid-item-meta {
+    grid-column: -3 / -1;  grid-row: 2 / 4;
+    border: 1px solid #fff;
+  }
+  
+  .grid-container4 {
+    display: grid;
+    gap: 10px;
+    /*grid-template-columns: repeat(3, minmax(100px, 1fr)); */
+    grid-template-rows: 80px; 
+    grid-auto-rows: 100px; 
+    grid-auto-flow: dense; /* default is row */
+    background-color: #80cbc4;
+    border: 3px solid black;
+  }
+  .grid-container4 .grid-item3:nth-child(2) {
+    grid-row: span 2;
+    border: 1px solid #fff;
+  }
+  .grid-container4 .grid-item3:nth-child(3) {
+    grid-column: span 3;
+    border: 1px solid #fff;
+  }
+  
