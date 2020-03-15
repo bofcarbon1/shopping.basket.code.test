@@ -42,3 +42,37 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Application Specific Notes
+This app started as an exercise for a company 
+called TASC. The first phase was entirely in App.tsx.
+Phase 2 was to seperate the components and add more
+use of props which gave the app a better architecture.
+Phase 3 will replace static data with Fetch REST calls
+to a service running in Java Spring Boot with an in
+memory data database that targets Oracle. 
+ 
+## Application Features for Shopping Basket
+Basket List
+  A list of selectable shopping baskets
+Basket Purchase Details
+  Details of the selected shopping basket for purchase
+Basket Purchase Receipt 
+  Receipt details of the purchased shopping basket
+
+## Application File Structure
+src/App.tsx  (parent)
+  The main app component 
+src/shop/BasketList.tsx
+  process the basket list (child of App.tsx)
+src/shop/BasketPurchase.tsx 
+  process the basket purchase (child of App.tsx)
+src/shop/BasketReceipt.tsx
+  process the basket purchase receipt (child of BasketPurchase.tsx)
+src/calculators/RoundTax.tsx
+  Rounds up the tax amounts
+src/formatters/Currency2.tsx
+  Converts amounts to currency  
+src/data/data.tsx
+  The data is local in arrays   
+   
